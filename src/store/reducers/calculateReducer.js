@@ -13,7 +13,7 @@ function setExpression({ expression, total}, action) {
       if (['+', '/', '*', '%'].includes(action.payload) && !expression) {
         return `${total}${action.payload}`
       }
-      return nextExpression + action.payload
+      return `${total || ''}${nextExpression + action.payload}`
     default:
       return expression
   }

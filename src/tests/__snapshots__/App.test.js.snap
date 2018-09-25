@@ -19,12 +19,62 @@ exports[`<App /> mounts and renders app without errors 1`] = `
       <div
         className="screen--container"
       >
-        <div
+        <TextFit
+          autoResize={true}
           className="screen-top"
-        />
-        <div
+          forceSingleModeWidth={true}
+          max={40}
+          min={1}
+          mode="single"
+          onReady={[Function]}
+          throttle={60}
+        >
+          <div
+            className="screen-top"
+            style={
+              Object {
+                "fontSize": null,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "whiteSpace": "nowrap",
+                }
+              }
+            />
+          </div>
+        </TextFit>
+        <TextFit
+          autoResize={true}
           className="screen-bottom"
-        />
+          forceSingleModeWidth={true}
+          max={150}
+          min={1}
+          mode="single"
+          onReady={[Function]}
+          throttle={50}
+        >
+          <div
+            className="screen-bottom"
+            style={
+              Object {
+                "fontSize": null,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "display": "inline-block",
+                  "whiteSpace": "nowrap",
+                }
+              }
+            />
+          </div>
+        </TextFit>
       </div>
     </Component>
     <Keypad
