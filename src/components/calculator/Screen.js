@@ -1,13 +1,23 @@
 import React from 'react';
+import { Textfit } from 'react-textfit';
 export default (props) => {
 return (
     <div className="screen--container">
-      <div className="screen-top">
+      <Textfit
+        max={40}
+        throttle={60}
+        mode="single"
+        className="screen-top"
+      >
         { props.expression }
-      </div>
-      <div className="screen-bottom">
+      </Textfit>
+      <Textfit
+        max={150}
+        mode="single"
+        className="screen-bottom"
+      >
         { props.total }
-      </div>
+      </Textfit>
     </div>
   )
 }

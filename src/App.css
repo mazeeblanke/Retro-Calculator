@@ -105,3 +105,28 @@
   background: #9e9e9e;
   color: black;
 }
+
+
+@media all and (max-width: 530px) {
+  .btn {
+    font-size: 32px;
+  }
+
+  .calculator--container{
+    width: 420px;
+  }
+
+  .btn--zero{
+    padding-left: 40px
+  }
+
+  .keypad{
+    flex: 0.6 0.5;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .btn {
+    font-size: 25px;
+  }
+}
