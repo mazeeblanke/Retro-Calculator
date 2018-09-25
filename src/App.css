@@ -140,7 +140,7 @@
 
 @media all and (max-width: 400px) {
   .calculator--container{
-    height: 70vh;
+    /* height: 70vh; */
     width: 315px;
   }
 }
