@@ -27,9 +27,12 @@
   to { transform: rotate(360deg); }
 }
 #root{
-  background: #171717;
+  background: black;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .calculator--container{
@@ -37,7 +40,7 @@
   flex-direction: column;
   height: 100vh;
   width: 520px;
-  background: #171717;
+  background: black;
 }
 
 .screen--container{
@@ -59,11 +62,15 @@
 .screen-top{
   flex: 1;
   font-size: 40px;
+  width: 90%;
+  align-self: flex-end;
 }
 
 .screen-bottom{
   flex: 2;
   font-size: 200px;
+  width: 80%;
+  align-self: flex-end;
 }
 
 .keypad{
@@ -82,7 +89,7 @@
   border-radius: 50%;
   margin: 5px;
   border: none;
-  background: #212121;
+  background: #171717;
   color: white;
   font-size: 45px;
   outline: none;
@@ -128,5 +135,12 @@
 @media all and (max-width: 420px) {
   .btn {
     font-size: 25px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .calculator--container{
+    height: 70vh;
+    width: 315px;
   }
 }
