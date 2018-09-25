@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+#root{
+  background: #171717;
+  display: flex;
+  justify-content: center;
+}
+
+.calculator--container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 520px;
+  background: #171717;
+}
+
+.screen--container{
+  flex: 0.5;
+  flex: 0.5 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.screen-bottom, .screen-top {
+  text-align: right;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.screen-top{
+  flex: 1;
+  font-size: 40px;
+}
+
+.screen-bottom{
+  flex: 2;
+  font-size: 200px;
+}
+
+.keypad{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.block{
+  flex: 1;
+  display: flex;
+}
+
+.btn{
+  flex: 1;
+  border-radius: 50%;
+  margin: 5px;
+  border: none;
+  background: #353535;
+  color: white;
+  font-size: 45px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn--zero{
+  flex: 2;
+  border-radius: 95px/80px;
+  align-items: end;
+  display: flex;
+  padding-left: 50px;
+}
+
+.btn--orange{
+  background: #e29200
+}
+
+.btn--grey{
+  background: #dedede;
+  color: black;
+}
