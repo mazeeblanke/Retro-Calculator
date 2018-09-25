@@ -10,7 +10,7 @@ function setExpression({ expression, total}, action) {
   let nextExpression = expression
   switch (action.type) {
     case types.SET_EXPRESSION:
-      if (['+', '/', '*'].includes(action.payload) && !expression) {
+      if (['+', '/', '*', '%'].includes(action.payload) && !expression) {
         return `${total}${action.payload}`
       }
       return nextExpression + action.payload
