@@ -47,7 +47,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         expression: '',
-        total: calculate(state.expression)
+        total: calculate(state.expression) || state.expression
       }
     default:
       return state
