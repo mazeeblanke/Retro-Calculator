@@ -9,10 +9,12 @@ let initialState = {
 function setExpression({ expression, total}, action) {
 
   if (
-    /[\d]+[-+%*/]$/.exec(expression) &&
+    /[\d]*[-+%*/]$/.exec(expression) &&
     /[-+%*/]/.exec(action.payload)
   ) {
-    expression = expression.slice(0, expression.length-1)
+    console.log('b', expression);
+    expression = expression.slice(0, expression.length - 1)
+    console.log('a', expression);
   }
 
   switch (action.type) {
@@ -34,7 +36,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         expression,
-        total: calculate(expression)
+        total: calculate(expression) || state.total
       }
     case types.CLEAR_EXPRESSION:
       return {
@@ -54,7 +56,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         expression: '',
-        total: calculate(state.expression) || state.expression
+        total: calculate(state.expression) || state.expression || state.total
       }
     default:
       return state
