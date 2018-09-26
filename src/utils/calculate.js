@@ -1,5 +1,6 @@
 export default (expression) => {
-  const matched = (new RegExp('([\\d]+)*([-+/*][\\d]+)+')).exec(expression)
+
+  const matched = (new RegExp('([\\d]+\\.?[\\d]*)?([-+/*][\\d]+\\.?[\\d]*)*')).exec(expression)
 
   if (!matched) {
     return 0;

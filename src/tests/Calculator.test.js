@@ -10,6 +10,9 @@ describe('Calculate', () => {
 
     expression = '0-9'
     expect(calculate(expression)).toBe(-9);
+
+    expression = '0.5+2.3'
+    expect(calculate(expression)).toBe(2.8);
   })
 
   it ('evaluates expressions starting with a "-" operator', () => {
@@ -20,6 +23,9 @@ describe('Calculate', () => {
   it ('evaluates longer expressions starting with a "-" operator', () => {
     expression = '-30-6'
     expect(calculate(expression)).toBe(-36);
+
+    expression = '-0.5+5.3'
+    expect(calculate(expression)).toBe(4.8)
   })
 
   it ('should throw an error for expressions starting with any other operator apart from "-" ', () => {
