@@ -7,13 +7,20 @@ let initialState = {
 }
 
 function setExpression({ expression, total}, action) {
-  let nextExpression = expression
+
+  if (
+    /[\d]+[-+%*/]$/.exec(expression) &&
+    /[-+%*/]/.exec(action.payload)
+  ) {
+    expression = expression.slice(0, expression.length-1)
+  }
+
   switch (action.type) {
     case types.SET_EXPRESSION:
       if (['+', '/', '*', '%'].includes(action.payload) && !expression) {
         return `${total}${action.payload}`
       }
-      return `${!expression && total ? total : ''}${nextExpression + action.payload}`
+      return `${!expression && total ? total : ''}${expression + action.payload}`
     default:
       return expression
   }
