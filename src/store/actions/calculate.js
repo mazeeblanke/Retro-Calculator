@@ -14,6 +14,17 @@ export const clear = () => {
   }
 }
 
+export const square = () => {
+  return {
+    type: types.SQUARE
+  }
+}
+export const squareRoot = () => {
+  return {
+    type: types.SQUARE_ROOT
+  }
+}
+
 
 export const deleteLastEntry = () => {
   return {
